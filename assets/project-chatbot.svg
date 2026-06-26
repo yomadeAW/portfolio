@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Placeholder screenshot for the Automated Restaurant Chatbot">
+  <defs>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4d6e0"/>
+      <stop offset="1" stop-color="#f0e8d6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="#f5efe2"/>
+  <rect width="800" height="600" fill="url(#g3)" opacity="0.2"/>
+  <text x="400" y="80" font-size="30" font-family="Georgia, serif" fill="#3d2e21" text-anchor="middle">Restaurant Chatbot</text>
+  <g>
+    <rect x="120" y="140" width="380" height="64" rx="22" fill="#fffaf2" stroke="#e0d4bc" stroke-width="2"/>
+    <rect x="300" y="230" width="380" height="64" rx="22" fill="#f0c2d5"/>
+    <rect x="120" y="320" width="320" height="64" rx="22" fill="#fffaf2" stroke="#e0d4bc" stroke-width="2"/>
+    <rect x="340" y="410" width="340" height="64" rx="22" fill="#f0c2d5"/>
+  </g>
+  <g font-family="Segoe UI, sans-serif" font-size="20" fill="#3d2e21">
+    <text x="150" y="180">Hi! View the menu?</text>
+    <text x="330" y="270" fill="#3d2e21">Yes, show me pizzas</text>
+    <text x="150" y="360">Here are todays specials</text>
+    <text x="370" y="450" fill="#3d2e21">Order 1 Margherita</text>
+  </g>
+</svg>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Planner — Moyomade Adebogun</title>
+  <meta name="description" content="An interactive academic planner to add, complete and delete tasks, built with JavaScript." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="planner">
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">M</span>
+        <span>Moyomade&nbsp;Adebogun</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html"   data-nav="home">Home</a></li>
+        <li><a href="about.html"   data-nav="about">About&nbsp;Me</a></li>
+        <li><a href="projects.html" data-nav="projects">Projects</a></li>
+        <li><a href="planner.html" data-nav="planner">Planner</a></li>
+        <li><a href="contact.html" data-nav="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container page-hero">
+      <span class="eyebrow">Stay organised</span><br/>
+      <h1>Academic Planner</h1>
+      <p>
+        Add your academic tasks, tick them off as you complete them, and delete the ones you
+        no longer need. Your list is saved in your browser so it’s here when you return.
+      </p>
+    </section>
+
+    <section class="section container">
+      <div class="planner-wrap">
+
+        <!-- Add task form -->
+        <form class="planner-form" id="task-form" aria-label="Add a new task">
+          <input type="text" id="task-title" placeholder="What do you need to do?"
+                 aria-label="Task title" required />
+          <input type="date" id="task-due" aria-label="Due date" />
+          <select id="task-priority" aria-label="Priority">
+            <option value="normal">Normal priority</option>
+            <option value="high">High priority</option>
+            <option value="low">Low priority</option>
+          </select>
+          <button type="submit" class="btn btn-primary">＋ Add task</button>
+        </form>
+
+        <!-- Stats (dynamic content updates) -->
+        <div class="planner-stats" id="planner-stats">
+          <div class="stat"><div class="num" id="stat-total">0</div><div class="label">Total</div></div>
+          <div class="stat"><div class="num" id="stat-active">0</div><div class="label">Active</div></div>
+          <div class="stat"><div class="num" id="stat-done">0</div><div class="label">Completed</div></div>
+        </div>
+
+        <!-- Task list -->
+        <ul class="task-list" id="task-list" aria-live="polite"></ul>
+
+        <div class="empty-state" id="empty-state">
+          <p>🌸 No tasks yet — add your first academic task above to get started!</p>
+        </div>
+
+        <p>
+          <button type="button" class="btn btn-ghost" id="clear-completed">Clear completed tasks</button>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <strong>Moyomade Adebogun</strong><br />
+        <span class="footer-note">Computer Science · Miva Open University</span>
+      </div>
+      <div class="footer-note">
+        Built for COS 106 — Introduction to Web Technologies ·
+        &copy; <span id="year">2025</span> Moyomade Adebogun
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/planner.js"></script>
+</body>
+</html>
